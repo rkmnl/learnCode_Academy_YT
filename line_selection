@@ -1,0 +1,15 @@
+import csv
+
+#read the line I want an writes it to a new file.
+
+infile = raw_input("name me the file you'd like to open")
+outfile = raw_input("name me the file you'd like to write the data to")
+
+with open (infile, 'rb') as ifile:
+	reader = csv.reader(ifile, delimiter=' ')
+	with open(outfile, 'wb') as ofile:
+		writer = csv.writer(ofile, delimiter=',', quotechar='"', quoting = csv.QUOTE_ALL)
+		lines = list(reader)[0:20]
+		writer.writerow(lines)
+ofile.close()
+ifile.close()	
