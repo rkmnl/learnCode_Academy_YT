@@ -1,0 +1,23 @@
+#to replace a character in a text file.
+#written for PowerShell and python 2.7
+
+#to replace a character in a text file.
+#written for PowerShell and python 2.7
+
+import sys
+import os
+import fileinput
+from shutil import copyfile
+
+ifile = raw_input("give me the input file you want me to use (just write down the directory and file name, no '' needed)>> ")
+ofile = raw_input("Where should I locate the output file, and how should I name it >> ")
+copyfile(ifile, ofile) 
+replacable = raw_input("give me the character  you want me to replace >> ")
+new = raw_input("give me the character you want me to replace the previous character with>> ")
+
+text = open(ofile).read()
+x = open(ofile, "w").write(text.replace(replacable, new))
+
+#note if you want to creat tab delimited just enter 	 in the shell
+
+
