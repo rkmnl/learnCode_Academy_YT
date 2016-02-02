@@ -1,0 +1,22 @@
+#to replace a character in a text file.
+#written for PowerShell and python 2.7
+
+#to replace a character in a text file.
+#written for PowerShell and python 2.7
+
+import sys
+import os
+import fileinput
+from shutil import copyfile
+import csv
+
+ifile = raw_input("Please note that you have to adjust the script to the columns that your would like to be copied! Give me the .csv input file you want me to use >> ")
+ofile = raw_input("Where should I locate the output file, and how should I name it >> ") 
+
+#this command copies column 1 - 4 to the next file.
+with open(ifileIII, 'rb') as source:
+	rdr= csv.reader(source)
+	with open(ofileIII, "wb") as result:
+		wtr= csv.writer(result)
+		for r in rdr:
+			wtr.writerow((r[1], r[2], r[3], r[4]))
