@@ -1,5 +1,6 @@
 
 #read the lines I want an writes it to a new file.
+# doesn't really work proporly. It selects the information of interest, but it dismiss the seration of rows, creating a file with al the selected information on one row."
 
 import csv
 import sys
